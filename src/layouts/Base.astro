@@ -1,0 +1,74 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = "Brad Brondt — Mortgage Loan Officer. Founder of Cerberus CRM & WebinarFuse. Helping South Jersey & Philly suburb homebuyers close with confidence.",
+  ogImage = "/og-image.png",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Brad Brondt",
+        "jobTitle": "Mortgage Loan Officer",
+        "url": "https://bradbrondt.com",
+        "sameAs": [
+          "https://www.instagram.com/brad_brondt/",
+          "https://www.facebook.com/bradbrondtmlo",
+          "https://www.linkedin.com/in/bradbrondt",
+          "https://www.youtube.com/@TheBrondtCookGroup"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Acre Mortgage and Financial Inc.",
+          "url": "https://thebrondtcookgroup.com"
+        }
+      }
+    </script>
+
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

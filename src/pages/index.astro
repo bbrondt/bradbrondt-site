@@ -1,0 +1,778 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Brad Brondt — Mortgage Loan Officer | South Jersey & Philadelphia">
+  <Nav />
+  <main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+    <section class="hero" aria-label="Introduction">
+      <!-- Background grid pattern -->
+      <div class="hero__grid" aria-hidden="true"></div>
+      <!-- Glow orb -->
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__content">
+          <div class="tag" style="margin-bottom: var(--space-6);">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="var(--color-accent)" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+            South Jersey & Philadelphia Suburbs
+          </div>
+
+          <h1 class="hero__heading">
+            <span class="gradient-text">Mortgage.</span><br />
+            With math.<br />
+            No jargon.
+          </h1>
+
+          <p class="hero__sub">
+            I've been closing home loans since 2009. Every rate cycle. Every market. 
+            Thousands of buyers. If you're thinking about buying — let's figure out 
+            exactly where you stand, in plain English.
+          </p>
+
+          <div class="hero__actions">
+            <a href="/webinar" class="btn btn--primary btn--lg">
+              Join the Free Webinar
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/about" class="btn btn--ghost btn--lg">
+              About Brad
+            </a>
+          </div>
+
+          <!-- Trust bar -->
+          <div class="hero__trust">
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">16+</span>
+              <span class="hero__trust-label">Years closing loans</span>
+            </div>
+            <div class="hero__trust-divider" aria-hidden="true"></div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">1,000s</span>
+              <span class="hero__trust-label">of buyers helped</span>
+            </div>
+            <div class="hero__trust-divider" aria-hidden="true"></div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">NJ + PA</span>
+              <span class="hero__trust-label">Service area</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TAGLINE MARQUEE
+         ===================================================== -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <span>Mortgage with math</span>
+        <span class="marquee__dot">·</span>
+        <span>No jargon, no shame, no "let's see"</span>
+        <span class="marquee__dot">·</span>
+        <span>Closing loans since 2009</span>
+        <span class="marquee__dot">·</span>
+        <span>South Jersey & Philly suburbs</span>
+        <span class="marquee__dot">·</span>
+        <span>Mortgage with math</span>
+        <span class="marquee__dot">·</span>
+        <span>No jargon, no shame, no "let's see"</span>
+        <span class="marquee__dot">·</span>
+        <span>Closing loans since 2009</span>
+        <span class="marquee__dot">·</span>
+        <span>South Jersey & Philly suburbs</span>
+        <span class="marquee__dot">·</span>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         WEBINAR SPOTLIGHT
+         ===================================================== -->
+    <section class="section webinar-spot" id="webinar">
+      <div class="container container--narrow">
+        <div class="webinar-card">
+          <div class="webinar-card__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Free Live Webinar
+          </div>
+          <h2 class="webinar-card__title">Home Buyer Readiness Workshop</h2>
+          <p class="webinar-card__desc">
+            In about an hour, I'll walk you through everything — your credit score targets, 
+            how much you actually need to bring to the table, what the full process looks like, 
+            and how to know if now is the right time. No selling. Just answers.
+          </p>
+          <ul class="webinar-card__points" role="list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Understand your credit score & what it means for your rate
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Learn exactly how much cash you need to buy
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              See the full process from application to closing in plain English
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Get your personal readiness score & know your next step
+            </li>
+          </ul>
+          <a href="/webinar" class="btn btn--primary btn--lg">
+            Reserve My Spot — It's Free
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <!-- TODO: Replace with real next webinar date -->
+          <p class="webinar-card__next">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Next session: <strong>[ADD DATE HERE]</strong> — spots are limited
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         THREE BRANDS
+         ===================================================== -->
+    <section class="section brands" id="brands">
+      <div class="container">
+        <div class="section-header">
+          <div class="tag">What I Do</div>
+          <h2 class="section-title">One person. Three businesses.<br />One story.</h2>
+          <p class="section-desc">
+            I don't just sell tools — I use every one of them every day in a live mortgage business. 
+            That's the difference.
+          </p>
+        </div>
+
+        <div class="brands__grid">
+          <!-- Card 1: Mortgage -->
+          <div class="card brands__card brands__card--featured">
+            <div class="brands__card-icon brands__card-icon--cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="tag" style="margin-bottom:var(--space-3);">Mortgage Lending</div>
+            <h3>The Brondt Cook Group</h3>
+            <p>
+              My mortgage team at Acre Mortgage. I help homebuyers across South Jersey and 
+              the Philadelphia suburbs navigate the buying process — with real math and 
+              zero runaround.
+            </p>
+            <ul class="brands__card-list" role="list">
+              <li>FHA, Conventional, VA, DSCR loans</li>
+              <li>First-time buyers & investors</li>
+              <li>Renovation loans (FHA 203k, Homestyle)</li>
+              <li>HELOCs & buy-before-you-sell</li>
+            </ul>
+            <a href="https://thebrondtcookgroup.com" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="margin-top:auto;">
+              Visit The Brondt Cook Group
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+
+          <!-- Card 2: Cerberus -->
+          <div class="card brands__card">
+            <div class="brands__card-icon brands__card-icon--gold">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="tag tag--gold" style="margin-bottom:var(--space-3);">CRM Software</div>
+            <h3>Cerberus CRM</h3>
+            <p>
+              I got frustrated with CRMs that weren't built for loan officers — so I built my own. 
+              Cerberus is what I use every day to run my mortgage business, and now other LOs use it too.
+            </p>
+            <a href="https://cerberuscrm.com" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" style="margin-top:auto;">
+              Learn About Cerberus →
+            </a>
+          </div>
+
+          <!-- Card 3: WebinarFuse -->
+          <div class="card brands__card">
+            <div class="brands__card-icon brands__card-icon--blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            </div>
+            <div class="tag tag--blue" style="margin-bottom:var(--space-3);">Webinar Tool</div>
+            <h3>WebinarFuse</h3>
+            <p>
+              An AI-powered voice-activated teleprompter and webinar package generator. 
+              I built it to run my own homebuyer webinars — and it eliminates the biggest 
+              friction point: the production side.
+            </p>
+            <a href="https://webinarfuse.com" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" style="margin-top:auto;">
+              Learn About WebinarFuse →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SOCIAL PROOF / TESTIMONIALS
+         ===================================================== -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="tag">What Clients Say</div>
+          <h2 class="section-title">Real people. Real results.</h2>
+        </div>
+
+        <div class="grid-3 testimonials__grid">
+          <!-- TODO: Replace these with real client testimonials -->
+          <div class="card testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "Brad made the whole process so much less intimidating. He explained everything in plain English and I always knew exactly where we were in the process."
+            </p>
+            <div class="testimonial-card__author">
+              <strong>[Client Name]</strong>
+              <span>First-time buyer, South Jersey</span>
+            </div>
+          </div>
+
+          <div class="card testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "I'd been told 'no' by two other lenders. Brad found a way to make it work and got us to closing. I can't recommend him enough."
+            </p>
+            <div class="testimonial-card__author">
+              <strong>[Client Name]</strong>
+              <span>Move-up buyer, Philadelphia suburbs</span>
+            </div>
+          </div>
+
+          <div class="card testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "I attended the webinar not really expecting much. I left with a clear plan and booked a call the same day. We closed 60 days later."
+            </p>
+            <div class="testimonial-card__author">
+              <strong>[Client Name]</strong>
+              <span>First-time buyer, NJ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MEDIA / AS SEEN ON
+         ===================================================== -->
+    <section class="section--tight media-bar">
+      <div class="container">
+        <p class="media-bar__label">As heard on</p>
+        <div class="media-bar__logos">
+          <!-- TODO: Replace with real podcast logos or text names -->
+          <span class="media-bar__item">Millionaire Loan Officer Podcast</span>
+          <span class="media-bar__sep" aria-hidden="true">·</span>
+          <span class="media-bar__item">Second Opinion Loan Officer</span>
+          <span class="media-bar__sep" aria-hidden="true">·</span>
+          <span class="media-bar__item">[Add Podcast Name]</span>
+          <span class="media-bar__sep" aria-hidden="true">·</span>
+          <span class="media-bar__item">[Add Podcast Name]</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
+    <section class="section cta-section">
+      <div class="container container--narrow">
+        <div class="cta-block">
+          <div class="cta-block__glow" aria-hidden="true"></div>
+          <div class="tag" style="margin-bottom:var(--space-6);">Ready to start?</div>
+          <h2 class="cta-block__title">
+            Find out exactly<br />where you stand.
+          </h2>
+          <p class="cta-block__desc">
+            Register for the free Home Buyer Readiness Webinar. One hour, 
+            plain English, and you'll leave knowing your next step — 
+            whether that's buying in 30 days or building toward 12 months from now.
+          </p>
+          <div class="cta-block__actions">
+            <a href="/webinar" class="btn btn--primary btn--lg">
+              Register Free
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/contact" class="btn btn--ghost btn--lg">
+              Talk to Brad First
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Base>
+
+<style>
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: clamp(var(--space-20), 12vw, var(--space-32));
+}
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,212,212,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,212,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.hero__glow {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(ellipse, rgba(0,212,212,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.hero__heading {
+  font-size: var(--text-hero);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin-bottom: var(--space-8);
+}
+
+.hero__sub {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-10);
+  max-width: 560px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  align-items: center;
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.hero__trust-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero__trust-num {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 900;
+  color: var(--color-accent);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.hero__trust-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.hero__trust-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--color-border);
+}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee-wrap {
+  background: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+  overflow: hidden;
+  padding-block: var(--space-4);
+}
+
+.marquee {
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-text-faint);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.marquee__dot {
+  color: var(--color-accent);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   SECTION HEADER (SHARED)
+   ============================================================ */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  max-width: 640px;
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.section-desc {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   WEBINAR SPOTLIGHT
+   ============================================================ */
+.webinar-spot {
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%);
+}
+
+.webinar-card {
+  background: var(--color-surface-card);
+  border: 1px solid rgba(0,212,212,0.2);
+  border-radius: var(--radius-xl);
+  padding: clamp(var(--space-8), 5vw, var(--space-16));
+  box-shadow: 0 0 60px rgba(0,212,212,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.webinar-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+  border: 1px solid rgba(0,212,212,0.25);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  width: fit-content;
+}
+
+.webinar-card__title {
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.webinar-card__desc {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  line-height: 1.65;
+}
+
+.webinar-card__points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.webinar-card__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  max-width: 100%;
+}
+
+.webinar-card__next {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+/* ============================================================
+   THREE BRANDS
+   ============================================================ */
+.brands__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.brands__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  height: 100%;
+}
+
+.brands__card--featured {
+  border-color: rgba(0,212,212,0.25);
+  box-shadow: 0 0 40px rgba(0,212,212,0.07);
+}
+
+.brands__card h3 {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brands__card p {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+}
+
+.brands__card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.brands__card-icon--cyan  { background: var(--color-accent-dim); color: var(--color-accent); }
+.brands__card-icon--gold  { background: var(--color-gold-dim);   color: var(--color-gold); }
+.brands__card-icon--blue  { background: rgba(0,130,255,0.12);    color: #4a9eff; }
+
+.brands__card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.brands__card-list li {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  padding-left: var(--space-4);
+  position: relative;
+  max-width: 100%;
+}
+.brands__card-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* Tag variants */
+.tag--gold {
+  background: var(--color-gold-dim);
+  color: var(--color-gold);
+  border-color: rgba(212,160,23,0.25);
+}
+.tag--blue {
+  background: rgba(0,130,255,0.1);
+  color: #4a9eff;
+  border-color: rgba(0,130,255,0.2);
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.testimonial-card__stars {
+  color: var(--color-gold);
+  font-size: var(--text-sm);
+  letter-spacing: 2px;
+}
+
+.testimonial-card__text {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  font-style: italic;
+  flex: 1;
+}
+
+.testimonial-card__author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.testimonial-card__author strong {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.testimonial-card__author span {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+
+/* ============================================================
+   MEDIA BAR
+   ============================================================ */
+.media-bar {
+  background: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+}
+
+.media-bar .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-6);
+}
+
+.media-bar__label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+}
+
+.media-bar__logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.media-bar__item {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.media-bar__sep {
+  color: var(--color-text-faint);
+}
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+.cta-section {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.cta-block {
+  position: relative;
+  text-align: center;
+  padding: clamp(var(--space-12), 8vw, var(--space-24));
+  background: var(--color-surface-card);
+  border: 1px solid rgba(0,212,212,0.15);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.cta-block__glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(ellipse, rgba(0,212,212,0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.cta-block__title {
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: var(--space-5);
+}
+
+.cta-block__desc {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  max-width: 520px;
+  margin-inline: auto;
+  margin-bottom: var(--space-8);
+}
+
+.cta-block__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .brands__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__trust-divider { display: none; }
+  .hero__trust { gap: var(--space-6); }
+}
+</style>

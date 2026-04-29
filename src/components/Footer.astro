@@ -1,0 +1,220 @@
+---
+const year = new Date().getFullYear();
+
+const socialLinks = [
+  { href: "https://www.instagram.com/brad_brondt/", label: "Instagram", icon: "instagram" },
+  { href: "https://www.facebook.com/bradbrondtmlo", label: "Facebook", icon: "facebook" },
+  { href: "https://www.linkedin.com/in/bradbrondt", label: "LinkedIn", icon: "linkedin" },
+  { href: "https://www.youtube.com/@TheBrondtCookGroup", label: "YouTube", icon: "youtube" },
+  { href: "https://www.tiktok.com/@bradbrondt", label: "TikTok", icon: "tiktok" },
+];
+
+const footerLinks = [
+  { section: "Business", links: [
+    { href: "https://thebrondtcookgroup.com", label: "The Brondt Cook Group", external: true },
+    { href: "https://cerberuscrm.com", label: "Cerberus CRM", external: true },
+    { href: "https://webinarfuse.com", label: "WebinarFuse", external: true },
+  ]},
+  { section: "Site", links: [
+    { href: "/about", label: "About Brad", external: false },
+    { href: "/webinar", label: "Free Webinar", external: false },
+    { href: "/contact", label: "Contact", external: false },
+  ]},
+];
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="/" class="footer__logo" aria-label="Brad Brondt — Home">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="8" fill="var(--color-accent)" fill-opacity="0.12"/>
+            <rect width="36" height="36" rx="8" stroke="var(--color-accent)" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="18" y="24" text-anchor="middle" font-family="Cabinet Grotesk, sans-serif" font-weight="900" font-size="18" fill="var(--color-accent)">B</text>
+          </svg>
+          <span>Brad Brondt</span>
+        </a>
+        <p class="footer__tagline">
+          Mortgage loan officer. Builder of tools.<br />
+          Helping people buy homes since 2009.
+        </p>
+        <!-- Social Icons -->
+        <ul class="footer__social" role="list" aria-label="Social media links">
+          {socialLinks.map(s => (
+            <li>
+              <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} class="footer__social-link">
+                {s.icon === 'instagram' && <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>}
+                {s.icon === 'facebook' && <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>}
+                {s.icon === 'linkedin' && <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>}
+                {s.icon === 'youtube' && <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>}
+                {s.icon === 'tiktok' && <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.05a8.16 8.16 0 0 0 4.76 1.52V7.14a4.85 4.85 0 0 1-1-.45z"/></svg>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Links columns -->
+      {footerLinks.map(col => (
+        <div class="footer__col">
+          <h3 class="footer__col-heading">{col.section}</h3>
+          <ul role="list">
+            {col.links.map(link => (
+              <li>
+                <a
+                  href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                  class="footer__link"
+                >
+                  {link.label}
+                  {link.external && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <!-- CTA column -->
+      <div class="footer__col">
+        <h3 class="footer__col-heading">Get Started</h3>
+        <p class="footer__cta-text">Register for the free Home Buyer Readiness Webinar and find out exactly where you stand.</p>
+        <a href="/webinar" class="btn btn--primary" style="margin-top: var(--space-4);">
+          Register Free →
+        </a>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin-block: var(--space-8);" />
+
+    <div class="footer__bottom">
+      <p class="footer__legal">
+        © {year} Brad Brondt | NMLS #242550 · The Brondt Cook Group, a DBA of Acre Mortgage and Financial Inc. | NMLS #13988 · Equal Housing Lender
+      </p>
+      <p class="footer__legal">
+        <a href="tel:8564859603">(856) 485-9603</a> · <a href="mailto:bbrondt@acremortgage.com">bbrondt@acremortgage.com</a> · 400 Sheppard Rd., Voorhees, NJ
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding-block: clamp(var(--space-16), 8vw, var(--space-24));
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-base);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.footer__tagline {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.footer__social {
+  display: flex;
+  gap: var(--space-3);
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  transition: all var(--transition);
+}
+.footer__social-link:hover {
+  color: var(--color-accent);
+  border-color: rgba(0,212,212,0.3);
+  background: var(--color-accent-dim);
+}
+
+.footer__col-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-5);
+}
+
+.footer__col ul { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+.footer__link:hover { color: var(--color-accent); }
+
+.footer__cta-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer__legal {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  line-height: 1.6;
+  max-width: 100%;
+}
+.footer__legal a {
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+.footer__legal a:hover { color: var(--color-accent); }
+
+@media (max-width: 1024px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+</style>

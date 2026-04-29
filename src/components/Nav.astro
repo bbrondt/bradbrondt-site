@@ -1,0 +1,207 @@
+---
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/webinar", label: "Free Webinar" },
+  { href: "/contact", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header" id="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="/" class="nav__logo" aria-label="Brad Brondt — Home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="var(--color-accent)" fill-opacity="0.12"/>
+          <rect width="36" height="36" rx="8" stroke="var(--color-accent)" stroke-opacity="0.4" stroke-width="1"/>
+          <text x="18" y="24" text-anchor="middle" font-family="Cabinet Grotesk, sans-serif" font-weight="900" font-size="18" fill="var(--color-accent)">B</text>
+        </svg>
+        <span class="nav__logo-text">Brad Brondt</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav__links" role="list">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class:list={["nav__link", { "nav__link--active": currentPath === link.href }]}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA -->
+      <div class="nav__actions">
+        <a href="/webinar" class="btn btn--primary">
+          Register Free
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
+    <ul role="list">
+      {navLinks.map(link => (
+        <li><a href={link.href} class="nav__mobile-link">{link.label}</a></li>
+      ))}
+      <li><a href="/webinar" class="btn btn--primary" style="width:100%; justify-content:center; margin-top: var(--space-2);">Register Free →</a></li>
+    </ul>
+  </div>
+</header>
+
+<style>
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 14, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: box-shadow var(--transition);
+}
+
+.site-header.scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav__logo-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.nav__link {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-md);
+  transition: color var(--transition), background var(--transition);
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-text);
+  background: var(--color-surface-card);
+}
+
+.nav__link--active {
+  color: var(--color-accent);
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Hamburger */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--space-2);
+}
+.nav__toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text-muted);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+/* Mobile Menu */
+.nav__mobile {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.nav__mobile.open {
+  max-height: 400px;
+}
+.nav__mobile ul {
+  list-style: none;
+  padding: var(--space-5) var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.nav__mobile-link {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-md);
+  transition: color var(--transition), background var(--transition);
+}
+.nav__mobile-link:hover {
+  color: var(--color-text);
+  background: var(--color-surface-card);
+}
+
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  .nav__actions .btn--primary { display: none; }
+  .nav__toggle { display: flex; }
+  .nav__mobile { display: block; }
+}
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const toggle = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('nav-mobile');
+
+  window.addEventListener('scroll', () => {
+    header?.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = mobileMenu?.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    mobileMenu?.setAttribute('aria-hidden', String(!isOpen));
+  });
+</script>

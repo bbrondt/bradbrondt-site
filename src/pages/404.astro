@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Page Not Found — Brad Brondt">
+  <Nav />
+  <main>
+    <section class="notfound">
+      <div class="container">
+        <p class="notfound__num accent">404</p>
+        <h1 class="notfound__title">Page not found.</h1>
+        <p class="notfound__desc muted">That page doesn't exist — but your path to homeownership does.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:var(--space-4); margin-top:var(--space-8);">
+          <a href="/" class="btn btn--primary btn--lg">Back to Home</a>
+          <a href="/webinar" class="btn btn--ghost btn--lg">Join the Free Webinar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+.notfound {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(var(--space-20), 12vw, var(--space-32));
+}
+.notfound__num {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: var(--space-4);
+}
+.notfound__title {
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-4);
+}
+.notfound__desc {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+</style>

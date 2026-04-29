@@ -1,0 +1,229 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="About Brad Brondt — Mortgage Loan Officer & Founder"
+  description="Brad Brondt has been closing home loans since 2009. He's also the founder of Cerberus CRM and WebinarFuse — tools he built to run his own mortgage business."
+>
+  <Nav />
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="tag" style="margin-bottom:var(--space-5);">About</div>
+        <h1 class="page-hero__title">The mortgage loan officer<br />who builds the tools.</h1>
+        <p class="page-hero__sub">
+          I've been helping people buy homes since 2009. Along the way, I got frustrated 
+          with systems that weren't built for how loan officers actually work — so I built my own.
+        </p>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section story">
+      <div class="container">
+        <div class="story__layout">
+          <!-- Left: photo placeholder -->
+          <div class="story__photo-wrap">
+            <div class="story__photo">
+              <!-- TODO: Replace with <img src="/images/brad-brondt.jpg" alt="Brad Brondt, Mortgage Loan Officer" /> -->
+              <div class="story__photo-placeholder" aria-hidden="true">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-faint)" stroke-width="1" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>Add your photo here</span>
+              </div>
+            </div>
+            <!-- Quick facts card -->
+            <div class="card story__facts">
+              <ul role="list">
+                <li>
+                  <span class="story__facts-label">NMLS</span>
+                  <span>#242550</span>
+                </li>
+                <li>
+                  <span class="story__facts-label">Company</span>
+                  <span>Acre Mortgage & Financial</span>
+                </li>
+                <li>
+                  <span class="story__facts-label">DBA</span>
+                  <span>The Brondt Cook Group</span>
+                </li>
+                <li>
+                  <span class="story__facts-label">Service Area</span>
+                  <span>South Jersey + Philly Suburbs</span>
+                </li>
+                <li>
+                  <span class="story__facts-label">Since</span>
+                  <span>2009</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: story text -->
+          <div class="story__text">
+            <div class="glow-line" style="margin-bottom:var(--space-8);"></div>
+
+            <h2>Closing loans since 2009</h2>
+            <p>
+              I started originating home loans during the 2009 financial crisis — probably the hardest 
+              time to start in this industry. That environment shaped everything about how I work: 
+              I don't guess, I don't hedge, and I don't give you a "let's see what happens." 
+              You get real numbers and a real plan.
+            </p>
+
+            <h2>The frustration that built two companies</h2>
+            <p>
+              After years of duct-taping together CRMs, follow-up tools, and webinar platforms that 
+              were never built for loan officers, I decided to stop complaining and start building. 
+              Cerberus CRM is the system I use every day to run The Brondt Cook Group — built specifically 
+              for the lead-to-application journey. WebinarFuse came out of running monthly homebuyer 
+              workshops and wanting a smarter way to do it.
+            </p>
+            <p>
+              I'm not a software company that also does mortgages. I'm a loan officer who built tools 
+              that actually work — and now other loan officers use them too.
+            </p>
+
+            <h2>What I believe about mortgages</h2>
+            <p>
+              Most people are closer to buying than they think. They just don't have anyone laying it 
+              out in plain English. My job is to tell you exactly where you stand — what your number 
+              is, what it means, and what you need to do next. No jargon, no shame, no runaround.
+            </p>
+
+            <div class="story__cta">
+              <a href="/webinar" class="btn btn--primary btn--lg">
+                Join the Free Webinar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="/contact" class="btn btn--ghost btn--lg">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE BRANDS SUMMARY -->
+    <section class="section--tight brands-summary">
+      <div class="container">
+        <h2 class="brands-summary__title">Three businesses. One operator.</h2>
+        <div class="grid-3">
+          <a href="https://thebrondtcookgroup.com" target="_blank" rel="noopener noreferrer" class="card brands-summary__card">
+            <span class="tag" style="margin-bottom:var(--space-3);">Mortgage Lending</span>
+            <strong>The Brondt Cook Group</strong>
+            <span>Acre Mortgage & Financial</span>
+          </a>
+          <a href="https://cerberuscrm.com" target="_blank" rel="noopener noreferrer" class="card brands-summary__card">
+            <span class="tag tag--gold" style="margin-bottom:var(--space-3);">CRM Software</span>
+            <strong>Cerberus CRM</strong>
+            <span>Built for loan officers</span>
+          </a>
+          <a href="https://webinarfuse.com" target="_blank" rel="noopener noreferrer" class="card brands-summary__card">
+            <span class="tag tag--blue" style="margin-bottom:var(--space-3);">Webinar Tool</span>
+            <strong>WebinarFuse</strong>
+            <span>AI-powered webinar production</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Base>
+
+<style>
+.page-hero {
+  padding-block: clamp(var(--space-16), 10vw, var(--space-24));
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+}
+.page-hero__title {
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+  margin-bottom: var(--space-6);
+  max-width: 700px;
+}
+.page-hero__sub {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.story__layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.story__photo {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+}
+.story__photo img { width: 100%; height: 100%; object-fit: cover; }
+.story__photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  color: var(--color-text-faint);
+  font-size: var(--text-xs);
+}
+
+.story__facts {
+  margin-top: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+}
+.story__facts ul { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+.story__facts li { display: flex; justify-content: space-between; gap: var(--space-4); font-size: var(--text-xs); }
+.story__facts span:last-child { color: var(--color-text); font-weight: 500; text-align: right; }
+.story__facts-label { color: var(--color-text-faint); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; flex-shrink: 0; }
+
+.story__text { display: flex; flex-direction: column; gap: var(--space-6); }
+.story__text h2 {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: var(--space-4);
+}
+.story__text h2:first-of-type { margin-top: 0; }
+.story__text p { color: var(--color-text-muted); line-height: 1.7; }
+.story__cta { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-4); }
+
+.brands-summary { background: var(--color-surface); border-block: 1px solid var(--color-border); }
+.brands-summary__title {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-8);
+}
+.brands-summary__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-decoration: none;
+}
+.brands-summary__card strong { font-size: var(--text-base); font-weight: 700; color: var(--color-text); }
+.brands-summary__card span:last-child { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+.tag--gold { background: var(--color-gold-dim); color: var(--color-gold); border-color: rgba(212,160,23,0.25); }
+.tag--blue { background: rgba(0,130,255,0.1); color: #4a9eff; border-color: rgba(0,130,255,0.2); }
+
+@media (max-width: 900px) {
+  .story__layout { grid-template-columns: 1fr; }
+  .story__photo { aspect-ratio: 3/2; max-height: 320px; }
+}
+</style>
